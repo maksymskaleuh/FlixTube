@@ -2,6 +2,7 @@ const express = require("express");
 const fs = require("fs");
 
 const app = express();
+const port = 3000;
 
 //
 // Throws an error if the PORT environment variable is missing.
@@ -13,7 +14,7 @@ if (!process.env.PORT) {
 //
 // Extracts the PORT environment variable.
 //
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || port;
 
 //
 // Registers a HTTP GET route for video streaming.
